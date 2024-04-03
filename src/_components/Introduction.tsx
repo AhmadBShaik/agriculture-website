@@ -44,7 +44,7 @@ const FeatureCard = ({ name, description, imageUrl }: IFeature) => {
 
 const IntroImages = () => {
   return (
-    <div className="w-full px-[16%] py-[10%] lg:pl-[3.5%] lg:pr-[1.5%] ">
+    <div className="w-full px-[16%] py-[10%] lg:pl-[3.5%] lg:pr-[1.5%]">
       <div className="aspect-square w-[95%] relative">
         <Image
           src={"/introduction-primary.png"}
@@ -100,36 +100,40 @@ const IntroDescription = () => {
     { icon: <IntroIllustration2 />, text: "Tips for ripening your fruits" },
   ];
   return (
-    <div className="w-full flex flex-col gap-3 mt-10 px-2 xl:mt-0 xl:px-0">
-      <div className={`${coveredByYourGrace.className} text-amber-500 text-xl`}>
-        Our Introduction
-      </div>
-      <div className="text-2xl xl:text-5xl font-bold xl:font-medium">
-        Agriculture & Organic Product Farm
-      </div>
-      <div className="text-green-600 text-xl font-medium">
-        Agrios is the largest global organic farm.
-      </div>
-      <div className="text-gray-400">
-        There are many variations of passages of lorem ipsum available but the
-        majority have suffered alteration in some form by injected humor or
-        random word which don’t look even.
-      </div>
-      <div className="flex flex-col xl:flex-row my-4 gap-3 xl:gap-0">
-        {introIllustrations.map((illustration) => (
-          <IntroIllustration {...illustration} />
-        ))}
-      </div>
+    <div className="flex items-center">
+      <div className="w-full flex flex-col gap-3 mt-10 px-2 xl:mt-0 xl:px-0">
+        <div
+          className={`${coveredByYourGrace.className} text-amber-500 text-xl`}
+        >
+          Our Introduction
+        </div>
+        <div className="text-2xl xl:text-5xl font-bold xl:font-medium">
+          Agriculture & Organic Product Farm
+        </div>
+        <div className="text-green-600 text-xl font-medium">
+          Agrios is the largest global organic farm.
+        </div>
+        <div className="text-gray-400">
+          There are many variations of passages of lorem ipsum available but the
+          majority have suffered alteration in some form by injected humor or
+          random word which don’t look even.
+        </div>
+        <div className="flex flex-col xl:flex-row my-4 gap-3 xl:gap-0">
+          {introIllustrations.map((illustration) => (
+            <IntroIllustration {...illustration} />
+          ))}
+        </div>
 
-      <div>
-        {introCheckListItems.map((item) => (
-          <IntroCheckListItem {...item} />
-        ))}
-      </div>
-      <div>
-        <button className="btn bg-green-600 text-white">
-          <small>Discover More</small>
-        </button>
+        <div>
+          {introCheckListItems.map((item) => (
+            <IntroCheckListItem {...item} />
+          ))}
+        </div>
+        <div>
+          <button className="btn bg-green-600 text-white">
+            <small>Discover More</small>
+          </button>
+        </div>
       </div>
     </div>
   );
