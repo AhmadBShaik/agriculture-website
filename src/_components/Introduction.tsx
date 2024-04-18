@@ -120,13 +120,13 @@ const IntroDescription = () => {
         </div>
         <div className="flex flex-col xl:flex-row my-4 gap-3 xl:gap-0">
           {introIllustrations.map((illustration) => (
-            <IntroIllustration {...illustration} />
+            <IntroIllustration {...illustration} key={illustration.text} />
           ))}
         </div>
 
         <div>
           {introCheckListItems.map((item) => (
-            <IntroCheckListItem {...item} />
+            <IntroCheckListItem {...item} key={item.text} />
           ))}
         </div>
         <div>
@@ -161,9 +161,9 @@ function Introduction() {
   return (
     <div className="min-h-screen flex flex-col gap-10">
       <div className="h-16"></div>
-      <div className="-mt-32 mx-auto w-full flex flex-col md:flex-row justify-center items-center gap-10 px-2 xl:px-0">
+      <div className="-mt-36 mx-auto w-full flex flex-col md:flex-row justify-center items-center gap-10 px-2 xl:px-0">
         {features.map((feature) => (
-          <FeatureCard {...feature} />
+          <FeatureCard {...feature} key={feature.name} />
         ))}
       </div>
       <div className="flex flex-col lg:flex-row max-w-7xl mx-auto flex-1 w-full">
